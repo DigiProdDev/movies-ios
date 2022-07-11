@@ -26,4 +26,5 @@ class TabBarViewController: UITabBarController {
         let viewControllerList = [ moviesCollectionViewController, favoritesTableViewController ]
         viewControllers = viewControllerList.map { UINavigationController(rootViewController: $0) }
     }
+
 }
