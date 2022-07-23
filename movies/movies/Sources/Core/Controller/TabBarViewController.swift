@@ -7,16 +7,22 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
+final class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupTabBar()
+        setupViewControllers()
+    }
+
+    private func setupTabBar() {
         tabBar.isTranslucent = false
         tabBar.tintColor = .black
         tabBar.unselectedItemTintColor = .darkGray
         tabBar.backgroundColor = UIColor(named: "lightYellow")
-
+    }
+    
+    private func setupViewControllers() {
         let moviesCollectionViewController = InitialViewController()
         moviesCollectionViewController.tabBarItem = UITabBarItem(title: "Movies", image: UIImage(named: "list_icon"), tag: 0)
         
@@ -26,5 +32,4 @@ class TabBarViewController: UITabBarController {
         let viewControllerList = [ moviesCollectionViewController, favoritesTableViewController ]
         viewControllers = viewControllerList.map { UINavigationController(rootViewController: $0) }
     }
-
 }
