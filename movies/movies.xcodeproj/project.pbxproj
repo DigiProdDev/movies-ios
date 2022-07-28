@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FBEF55128767F8600D49D30 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBEF55028767F8600D49D30 /* TabBarViewController.swift */; };
+		7FBEF5542876861800D49D30 /* TabBarViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBEF5532876861700D49D30 /* TabBarViewControllerTestCase.swift */; };
+		7FCE03172892FD1200CAB68D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCE03162892FD1200CAB68D /* UIColor+Extension.swift */; };
 		ECDEBEC4286E15220066A955 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEBEC3286E15220066A955 /* AppDelegate.swift */; };
 		ECDEBEC6286E15220066A955 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEBEC5286E15220066A955 /* SceneDelegate.swift */; };
 		ECDEBEC8286E15220066A955 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEBEC7286E15220066A955 /* InitialViewController.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7FBEF55028767F8600D49D30 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7FBEF5532876861700D49D30 /* TabBarViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerTestCase.swift; sourceTree = "<group>"; };
+		7FCE03162892FD1200CAB68D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		ECDEBEC0286E15220066A955 /* movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECDEBEC3286E15220066A955 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECDEBEC5286E15220066A955 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7FCE03152892FCC700CAB68D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7FCE03162892FD1200CAB68D /* UIColor+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		ECDEBEB7286E15220066A955 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +172,7 @@
 		ECDEBEF9286E1D4F0066A955 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7FCE03152892FCC700CAB68D /* Extension */,
 				ECDEBEFA286E1D620066A955 /* Controller */,
 				ECDEBF08286E25160066A955 /* Model */,
 				ECDEBEF8286E1D0D0066A955 /* Resources */,
@@ -170,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				ECDEBEC7286E15220066A955 /* InitialViewController.swift */,
+				7FBEF55028767F8600D49D30 /* TabBarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -212,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				ECDEBF06286E24130066A955 /* InitialViewControllerTestCase.swift */,
+				7FBEF5532876861700D49D30 /* TabBarViewControllerTestCase.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -358,8 +375,10 @@
 				ECDEBEC8286E15220066A955 /* InitialViewController.swift in Sources */,
 				ECDEBEC4286E15220066A955 /* AppDelegate.swift in Sources */,
 				ECDEBF00286E20220066A955 /* InitialView.swift in Sources */,
+				7FBEF55128767F8600D49D30 /* TabBarViewController.swift in Sources */,
 				ECDEBECE286E15220066A955 /* movies.xcdatamodeld in Sources */,
 				ECDEBEC6286E15220066A955 /* SceneDelegate.swift in Sources */,
+				7FCE03172892FD1200CAB68D /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +388,7 @@
 			files = (
 				ECDEBF04286E208E0066A955 /* InitialViewTestCase.swift in Sources */,
 				ECDEBF07286E24130066A955 /* InitialViewControllerTestCase.swift in Sources */,
+				7FBEF5542876861800D49D30 /* TabBarViewControllerTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +554,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -545,7 +566,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -561,6 +582,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -572,7 +594,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
