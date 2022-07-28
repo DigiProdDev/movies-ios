@@ -26,7 +26,7 @@ class TabBarViewControllerTestCase: XCTestCase {
         XCTAssertEqual(sut.tabBar.isTranslucent, false)
         XCTAssertEqual(sut.tabBar.tintColor, .black)
         XCTAssertEqual(sut.tabBar.unselectedItemTintColor, .darkGray)
-        XCTAssertEqual(sut.tabBar.backgroundColor, UIColor(named: "lightYellow"))
+        XCTAssertEqual(sut.tabBar.backgroundColor, .lightYellow)
     }
     
     func testInitialView() {
