@@ -14,10 +14,12 @@ protocol ViewCodable {
 }
 
 extension ViewCodable {
+
     func setupView() {
         configure()
         buildHierarchy()
         buildConstraints()
         render()
     }
+
 }

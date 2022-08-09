@@ -5,11 +5,11 @@
 //  Created by Gustavo Garcia Leite on 30/06/22.
 //
 
-import XCTest
 @testable import movies
+import XCTest
 
 final class InitialViewControllerTestCase: XCTestCase {
-    
+
     private var sut: InitialViewController!
 
     override func setUp() {
@@ -26,5 +26,5 @@ final class InitialViewControllerTestCase: XCTestCase {
         sut.loadView()
         XCTAssertTrue(sut.view is InitialView)
     }
-}
 
+}
