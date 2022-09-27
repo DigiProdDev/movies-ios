@@ -19,6 +19,8 @@ class MovieCell: UICollectionViewCell {
         }
     }
     
+    var delegate: MovieCellDelegate?
+    
     private lazy var coverImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = .init(named: "movie-placeholder")
@@ -64,6 +66,10 @@ class MovieCell: UICollectionViewCell {
         self.coverImageView.image = image
         self.titleLabel.text = title
     }
+    
+    @objc func handleTap() {
+        delegate?.didSelectCell()
+    }
 }
 
 // MARK: - ViewCodable
@@ -73,6 +79,9 @@ extension MovieCell: ViewCodable {
         self.translatesAutoresizingMaskIntoConstraints = false
         setupButton()
         favoriteButton.addTarget(self, action: #selector(favoritePressed), for: .touchUpInside)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        self.addGestureRecognizer(tap)
     }
     
     func buildHierarchy() {
