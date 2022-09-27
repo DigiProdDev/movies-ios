@@ -11,8 +11,11 @@ final class InitialView: UIView {
     
     private(set) var titleLabel: UILabel
     
+    private(set) var movieCell: MovieCell
+    
     override init(frame: CGRect = .zero) {
         titleLabel = UILabel()
+        movieCell = MovieCell(frame: .zero)
         super.init(frame: frame)
         setupView()
     }
@@ -32,12 +35,18 @@ extension InitialView: ViewCodable {
     }
     func buildHierarchy() {
         addSubview(titleLabel)
+        addSubview(movieCell)
     }
     
     func buildConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            
+            movieCell.centerXAnchor.constraint(equalTo: centerXAnchor),
+            movieCell.centerYAnchor.constraint(equalTo: centerYAnchor),
+            movieCell.heightAnchor.constraint(equalToConstant: 250),
+            movieCell.widthAnchor.constraint(equalToConstant: 150),
         ])
     }
     
