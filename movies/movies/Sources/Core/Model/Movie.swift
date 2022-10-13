@@ -5,6 +5,8 @@
 //  Created by gustavo.garcia.leite on 26/09/22.
 //
 
+import Foundation
+
 struct MovieResponse: Decodable {
     
     let page: Int?
@@ -27,7 +29,7 @@ struct Movie: Decodable {
     let overview: String?
     let originalTitle: String?
     let posterPath: String?
-    let releaseDate: String?
+    let releaseDate: Date?
     let title: String?
     
     private enum CodingKeys: String, CodingKey {
