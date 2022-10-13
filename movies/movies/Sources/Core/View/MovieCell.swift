@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol MovieCellDelegate {
-    func didSelectCell()
+protocol MovieCellDelegate: AnyObject {
+    func didPressFavorite(status: Bool)
 }
 
-class MovieCell: UICollectionViewCell {
+final class MovieCell: UICollectionViewCell {
     
     public var isFavorite: Bool = false {
         didSet {
@@ -19,11 +19,10 @@ class MovieCell: UICollectionViewCell {
         }
     }
     
-    var delegate: MovieCellDelegate?
+    weak var delegate: MovieCellDelegate?
     
     private lazy var coverImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .init(named: "movie-placeholder")
         imageView.backgroundColor = .white
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -32,7 +31,6 @@ class MovieCell: UICollectionViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Thor"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -42,6 +40,13 @@ class MovieCell: UICollectionViewCell {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    
+    convenience init(frame: CGRect = .zero,
+                     delegate: MovieCellDelegate? = nil,
+                     image: UIImage, title: String, isFavorite: Bool) {
+        self.init(frame: frame)
+        configure(image: image, title: title, isFavorite: isFavorite)
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -59,6 +64,7 @@ class MovieCell: UICollectionViewCell {
     
     @objc func favoritePressed() {
         isFavorite.toggle()
+        delegate?.didPressFavorite(status: isFavorite)
     }
     
     public func configure(image: UIImage, title: String, isFavorite: Bool) {
@@ -66,22 +72,16 @@ class MovieCell: UICollectionViewCell {
         self.coverImageView.image = image
         self.titleLabel.text = title
     }
-    
-    @objc func handleTap() {
-        delegate?.didSelectCell()
-    }
 }
 
 // MARK: - ViewCodable
 
 extension MovieCell: ViewCodable {
+
     func configure() {
         self.translatesAutoresizingMaskIntoConstraints = false
         setupButton()
         favoriteButton.addTarget(self, action: #selector(favoritePressed), for: .touchUpInside)
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        self.addGestureRecognizer(tap)
     }
     
     func buildHierarchy() {
