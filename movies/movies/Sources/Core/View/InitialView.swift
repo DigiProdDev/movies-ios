@@ -8,9 +8,8 @@
 import UIKit
 
 final class InitialView: UIView {
-    
+
     private(set) var titleLabel: UILabel
-    
     private(set) var movieCell: MovieCell
     
     override init(frame: CGRect = .zero) {
@@ -21,25 +20,26 @@ final class InitialView: UIView {
         super.init(frame: frame)
         setupView()
     }
-    
+
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
 }
 
 extension InitialView: ViewCodable {
-    
+
     func configure() {
         titleLabel.text = "Movies"
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
     }
+
     func buildHierarchy() {
         addSubview(titleLabel)
         addSubview(movieCell)
     }
-    
+
     func buildConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -51,11 +51,11 @@ extension InitialView: ViewCodable {
             movieCell.widthAnchor.constraint(equalToConstant: 150),
         ])
     }
-    
+
     func render() {
         backgroundColor = .yellow
         titleLabel.backgroundColor = .black
         titleLabel.textColor = .white
     }
-}
 
+}

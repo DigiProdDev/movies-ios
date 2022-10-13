@@ -5,11 +5,11 @@
 //  Created by Gustavo Garcia Leite on 30/06/22.
 //
 
-import XCTest
 @testable import movies
+import XCTest
 
 final class InitialViewTestCase: XCTestCase {
-    
+
     private var sut: InitialView!
 
     override func setUp() {
@@ -29,4 +29,5 @@ final class InitialViewTestCase: XCTestCase {
         XCTAssertEqual(sut.titleLabel.text, "Movies")
         XCTAssertFalse(sut.titleLabel.translatesAutoresizingMaskIntoConstraints)
     }
+
 }

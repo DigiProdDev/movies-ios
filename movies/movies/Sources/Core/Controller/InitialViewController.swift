@@ -8,8 +8,9 @@
 import UIKit
 
 final class InitialViewController: UIViewController {
-    
+
     override func loadView() {
         view = InitialView()
     }
+
 }

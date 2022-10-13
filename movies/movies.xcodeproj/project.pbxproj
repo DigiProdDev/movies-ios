@@ -17,8 +17,6 @@
 		ECDEBECE286E15220066A955 /* movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECDEBECC286E15220066A955 /* movies.xcdatamodeld */; };
 		ECDEBED0286E15240066A955 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECDEBECF286E15240066A955 /* Assets.xcassets */; };
 		ECDEBED3286E15240066A955 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDEBED1286E15240066A955 /* LaunchScreen.storyboard */; };
-		ECDEBEE8286E15240066A955 /* moviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEBEE7286E15240066A955 /* moviesUITests.swift */; };
-		ECDEBEEA286E15240066A955 /* moviesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEBEE9286E15240066A955 /* moviesUITestsLaunchTests.swift */; };
 		ECDEBEFC286E1FC30066A955 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEBEFB286E1FC30066A955 /* ViewCodable.swift */; };
 		ECDEBF00286E20220066A955 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEBEFF286E20220066A955 /* InitialView.swift */; };
 		ECDEBF04286E208E0066A955 /* InitialViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEBF03286E208E0066A955 /* InitialViewTestCase.swift */; };
@@ -27,13 +25,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		ECDEBEDA286E15240066A955 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ECDEBEB8286E15220066A955 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ECDEBEBF286E15220066A955;
-			remoteInfo = movies;
-		};
-		ECDEBEE4286E15240066A955 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ECDEBEB8286E15220066A955 /* Project object */;
 			proxyType = 1;
@@ -56,9 +47,6 @@
 		ECDEBED2286E15240066A955 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECDEBED4286E15240066A955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECDEBED9286E15240066A955 /* moviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECDEBEE3286E15240066A955 /* moviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECDEBEE7286E15240066A955 /* moviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviesUITests.swift; sourceTree = "<group>"; };
-		ECDEBEE9286E15240066A955 /* moviesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ECDEBEFB286E1FC30066A955 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		ECDEBEFF286E20220066A955 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		ECDEBF03286E208E0066A955 /* InitialViewTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewTestCase.swift; sourceTree = "<group>"; };
@@ -80,13 +68,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ECDEBEE0286E15240066A955 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,7 +76,6 @@
 			children = (
 				ECDEBEC2286E15220066A955 /* movies */,
 				ECDEBEDC286E15240066A955 /* moviesTests */,
-				ECDEBEE6286E15240066A955 /* moviesUITests */,
 				ECDEBEC1286E15220066A955 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,7 +85,6 @@
 			children = (
 				ECDEBEC0286E15220066A955 /* movies.app */,
 				ECDEBED9286E15240066A955 /* moviesTests.xctest */,
-				ECDEBEE3286E15240066A955 /* moviesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,15 +103,6 @@
 				ECDEBF01286E20650066A955 /* Core */,
 			);
 			path = moviesTests;
-			sourceTree = "<group>";
-		};
-		ECDEBEE6286E15240066A955 /* moviesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				ECDEBEE7286E15240066A955 /* moviesUITests.swift */,
-				ECDEBEE9286E15240066A955 /* moviesUITestsLaunchTests.swift */,
-			);
-			path = moviesUITests;
 			sourceTree = "<group>";
 		};
 		ECDEBEF6286E1CAB0066A955 /* Application */ = {
@@ -243,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECDEBEED286E15240066A955 /* Build configuration list for PBXNativeTarget "movies" */;
 			buildPhases = (
+				EC7B3A7628A17784002383F4 /* SwiftLint */,
 				ECDEBEBC286E15220066A955 /* Sources */,
 				ECDEBEBD286E15220066A955 /* Frameworks */,
 				ECDEBEBE286E15220066A955 /* Resources */,
@@ -274,24 +245,6 @@
 			productReference = ECDEBED9286E15240066A955 /* moviesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		ECDEBEE2286E15240066A955 /* moviesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ECDEBEF3286E15240066A955 /* Build configuration list for PBXNativeTarget "moviesUITests" */;
-			buildPhases = (
-				ECDEBEDF286E15240066A955 /* Sources */,
-				ECDEBEE0286E15240066A955 /* Frameworks */,
-				ECDEBEE1286E15240066A955 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				ECDEBEE5286E15240066A955 /* PBXTargetDependency */,
-			);
-			name = moviesUITests;
-			productName = moviesUITests;
-			productReference = ECDEBEE3286E15240066A955 /* moviesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -306,10 +259,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					ECDEBED8286E15240066A955 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = ECDEBEBF286E15220066A955;
-					};
-					ECDEBEE2286E15240066A955 = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = ECDEBEBF286E15220066A955;
 					};
@@ -330,7 +279,6 @@
 			targets = (
 				ECDEBEBF286E15220066A955 /* movies */,
 				ECDEBED8286E15240066A955 /* moviesTests */,
-				ECDEBEE2286E15240066A955 /* moviesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -352,14 +300,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ECDEBEE1286E15240066A955 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EC7B3A7628A17784002383F4 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-/* End PBXResourcesBuildPhase section */
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ECDEBEBC286E15220066A955 /* Sources */ = {
@@ -388,15 +350,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ECDEBEDF286E15240066A955 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ECDEBEE8286E15240066A955 /* moviesUITests.swift in Sources */,
-				ECDEBEEA286E15240066A955 /* moviesUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -404,11 +357,6 @@
 			isa = PBXTargetDependency;
 			target = ECDEBEBF286E15220066A955 /* movies */;
 			targetProxy = ECDEBEDA286E15240066A955 /* PBXContainerItemProxy */;
-		};
-		ECDEBEE5286E15240066A955 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = ECDEBEBF286E15220066A955 /* movies */;
-			targetProxy = ECDEBEE4286E15240066A955 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -632,40 +580,6 @@
 			};
 			name = Release;
 		};
-		ECDEBEF4286E15240066A955 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.accenture.ios.movies.moviesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = movies;
-			};
-			name = Debug;
-		};
-		ECDEBEF5286E15240066A955 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.accenture.ios.movies.moviesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = movies;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -692,15 +606,6 @@
 			buildConfigurations = (
 				ECDEBEF1286E15240066A955 /* Debug */,
 				ECDEBEF2286E15240066A955 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ECDEBEF3286E15240066A955 /* Build configuration list for PBXNativeTarget "moviesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ECDEBEF4286E15240066A955 /* Debug */,
-				ECDEBEF5286E15240066A955 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
