@@ -15,7 +15,9 @@ final class InitialView: UIView {
     
     override init(frame: CGRect = .zero) {
         titleLabel = UILabel()
-        movieCell = MovieCell(frame: .zero)
+        movieCell = MovieCell(delegate: nil,
+                              image: .init(named: "movie-placeholder")!,
+                              title: "Thor", isFavorite: false)
         super.init(frame: frame)
         setupView()
     }
