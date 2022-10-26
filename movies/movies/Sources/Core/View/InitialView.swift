@@ -11,12 +11,12 @@ final class InitialView: UIView {
 
     private(set) var titleLabel: UILabel
     private(set) var movieCell: MovieCell
-    
+
     override init(frame: CGRect = .zero) {
         titleLabel = UILabel()
         movieCell = MovieCell(delegate: nil,
-                              image: .init(named: "movie-placeholder")!,
-                              title: "Thor", isFavorite: false)
+                              title: "Thor",
+                              isFavorite: false)
         super.init(frame: frame)
         setupView()
     }
@@ -44,7 +44,7 @@ extension InitialView: ViewCodable {
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            
+
             movieCell.centerXAnchor.constraint(equalTo: centerXAnchor),
             movieCell.centerYAnchor.constraint(equalTo: centerYAnchor),
             movieCell.heightAnchor.constraint(equalToConstant: 250),
