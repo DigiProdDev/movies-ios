@@ -8,7 +8,7 @@
 import Foundation
 
 struct MovieResponse: Decodable {
-    
+
     let page: Int?
     let results: [Movie]
     let totalResults: Int?
@@ -20,10 +20,11 @@ struct MovieResponse: Decodable {
         case totalPages = "total_pages"
         case results
     }
+
 }
 
 struct Movie: Decodable {
-    
+
     let id: Int?
     let genreIds: [Int]?
     let overview: String?
@@ -31,7 +32,7 @@ struct Movie: Decodable {
     let posterPath: String?
     let releaseDate: Date?
     let title: String?
-    
+
     private enum CodingKeys: String, CodingKey {
         case id
         case genreIds = "genre_ids"
@@ -41,4 +42,5 @@ struct Movie: Decodable {
         case releaseDate = "release_date"
         case title
     }
+
 }
